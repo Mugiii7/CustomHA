@@ -50,4 +50,12 @@ class WelcomeFragment : Fragment() {
                 .commit()
         }
     }
+
+    private fun startDemoMode() {
+        demoModeManager.enableDemoMode()
+        
+        // Start WebView directly with demo content
+        startActivity(WebViewActivity.newInstance(requireContext()))
+        requireActivity().finish()
+    }
 }
