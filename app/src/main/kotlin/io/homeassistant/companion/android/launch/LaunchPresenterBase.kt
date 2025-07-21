@@ -20,6 +20,12 @@ abstract class LaunchPresenterBase(
 
     override fun onViewReady(serverUrlToOnboard: String?) {
         mainScope.launch {
+            // Check for demo mode first
+            if (demoModeManager.isDemoModeEnabled) {
+                view.displayWebview()
+                return@launch
+            }
+
             // Remove any invalid servers (incomplete, partly migrated from another device)
             serverManager.defaultServers
                 .filter { serverManager.authenticationRepository(it.id).getSessionState() == SessionState.ANONYMOUS }
