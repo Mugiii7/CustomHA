@@ -70,8 +70,9 @@ dependencies {
 
     implementation(libs.androidx.health.services.client)
 
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.messaging)
+    // Firebase dependencies disabled - no Firebase setup
+    // implementation(platform(libs.firebase.bom))
+    // implementation(libs.firebase.messaging)
     screenshotTestImplementation(libs.compose.uiTooling)
 
     androidTestImplementation(platform(libs.compose.bom))
