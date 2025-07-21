@@ -1287,7 +1287,22 @@ class WebViewActivity :
         if (openInApp) {
             loadedUrl = url
             clearHistory = !keepHistory
-            webView.loadUrl(url)
+            
+            if (demoModeManager.isDemoModeEnabled) {
+                // Load demo HTML content
+                val demoHtml = demoWebViewContent.generateDemoHTML()
+                webView.loadDataWithBaseURL(
+                    "https://demo.home-assistant.local/", 
+                    demoHtml,
+                    "text/html",
+                    "UTF-8",
+                    null
+                )
+                // Simulate connection for demo mode
+                isConnected = true
+            } else {
+                webView.loadUrl(url)
+            }
             waitForConnection()
         } else {
             try {
