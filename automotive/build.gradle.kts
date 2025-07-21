@@ -1,4 +1,5 @@
-import com.google.gms.googleservices.GoogleServicesPlugin.GoogleServicesPluginConfig
+// Google Services import disabled - no Firebase setup
+// import com.google.gms.googleservices.GoogleServicesPlugin.GoogleServicesPluginConfig
 
 plugins {
     alias(libs.plugins.homeassistant.android.application)
