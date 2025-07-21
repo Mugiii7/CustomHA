@@ -6,6 +6,7 @@ import dagger.hilt.android.scopes.ActivityScoped
 import io.homeassistant.companion.android.BuildConfig
 import io.homeassistant.companion.android.common.data.integration.DeviceRegistration
 import io.homeassistant.companion.android.common.data.servers.ServerManager
+import io.homeassistant.companion.android.demo.DemoModeManager
 import io.homeassistant.companion.android.onboarding.getMessagingToken
 import javax.inject.Inject
 import kotlinx.coroutines.launch
