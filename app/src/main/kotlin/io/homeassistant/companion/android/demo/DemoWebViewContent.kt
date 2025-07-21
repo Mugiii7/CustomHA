@@ -259,6 +259,7 @@ class DemoWebViewContent @Inject constructor(
     private fun generateControlCard(entity: Entity): String {
         val friendlyName = entity.attributes["friendly_name"] as? String ?: entity.entityId
         val state = entity.state
+        val domain = entity.entityId.split(".")[0]
         
         return """
         <div class="card">
