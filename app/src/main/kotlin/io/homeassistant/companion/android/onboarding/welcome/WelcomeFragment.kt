@@ -28,6 +28,7 @@ class WelcomeFragment : Fragment() {
                 HomeAssistantAppTheme {
                     WelcomeView(
                         onContinue = { welcomeNavigation() },
+                        onDemoMode = { startDemoMode() }
                     )
                 }
             }
