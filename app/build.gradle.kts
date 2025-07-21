@@ -4,8 +4,9 @@ import com.google.gms.googleservices.GoogleServicesPlugin.GoogleServicesPluginCo
 plugins {
     alias(libs.plugins.homeassistant.android.application)
     alias(libs.plugins.homeassistant.android.flavor)
-    alias(libs.plugins.firebase.appdistribution)
-    alias(libs.plugins.google.services)
+    // Firebase plugins disabled - no Firebase setup
+    // alias(libs.plugins.firebase.appdistribution)
+    // alias(libs.plugins.google.services)
     alias(libs.plugins.homeassistant.android.dependencies)
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.screenshot)
