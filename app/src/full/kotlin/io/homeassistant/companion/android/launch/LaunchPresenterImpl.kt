@@ -13,8 +13,11 @@ import kotlinx.coroutines.launch
 import timber.log.Timber
 
 @ActivityScoped
-class LaunchPresenterImpl @Inject constructor(@ActivityContext context: Context, serverManager: ServerManager) :
-    LaunchPresenterBase(context as LaunchView, serverManager) {
+class LaunchPresenterImpl @Inject constructor(
+    @ActivityContext context: Context, 
+    serverManager: ServerManager,
+    demoModeManager: DemoModeManager
+) : LaunchPresenterBase(context as LaunchView, serverManager, demoModeManager) {
     override fun resyncRegistration() {
         if (!serverManager.isRegistered()) return
         serverManager.defaultServers.forEach {
