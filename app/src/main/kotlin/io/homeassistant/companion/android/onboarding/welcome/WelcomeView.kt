@@ -100,6 +100,6 @@ fun WelcomeView(onContinue: () -> Unit, onDemoMode: () -> Unit) {
 @Preview(showSystemUi = true, uiMode = UI_MODE_NIGHT_YES)
 private fun PreviewWelcome() {
     HomeAssistantAppTheme {
-        WelcomeView(onContinue = {})
+        WelcomeView(onContinue = {}, onDemoMode = {})
     }
 }
