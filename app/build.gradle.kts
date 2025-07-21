@@ -38,11 +38,12 @@ android {
         imageDifferenceThreshold = 0.00025f // 0.025%
     }
 
-    firebaseAppDistribution {
-        serviceCredentialsFile = "firebaseAppDistributionServiceCredentialsFile.json"
-        releaseNotesFile = "./app/build/outputs/changelogBeta"
-        groups = "continuous-deployment"
-    }
+    // Firebase App Distribution configuration disabled - no Firebase setup
+    // firebaseAppDistribution {
+    //     serviceCredentialsFile = "firebaseAppDistributionServiceCredentialsFile.json"
+    //     releaseNotesFile = "./app/build/outputs/changelogBeta"
+    //     groups = "continuous-deployment"
+    // }
 }
 
 dependencies {
