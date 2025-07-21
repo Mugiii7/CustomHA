@@ -175,24 +175,37 @@ class AndroidCompilationTest:
     def test_html_generation_completeness(self):
         """Test that HTML generation is complete and valid"""
         webview_content_file = "/app/app/src/main/kotlin/io/homeassistant/companion/android/demo/DemoWebViewContent.kt"
+        webview_activity_file = "/app/app/src/main/kotlin/io/homeassistant/companion/android/webview/WebViewActivity.kt"
         
         with open(webview_content_file, 'r') as f:
             content = f.read()
         
-        # Check for complete HTML structure
+        with open(webview_activity_file, 'r') as f:
+            webview_content = f.read()
+        
+        # Check for complete HTML structure in DemoWebViewContent
         html_requirements = [
             "<!DOCTYPE html>",
             "<html",
             "<head>",
             "<body>",
-            "</html>",
-            "text/html",
-            "UTF-8"
+            "</html>"
         ]
         
         for requirement in html_requirements:
             if requirement not in content:
                 self.issues_found.append(f"Missing HTML requirement: {requirement}")
+                return False
+        
+        # Check for MIME type and encoding in WebViewActivity
+        webview_requirements = [
+            "text/html",
+            "UTF-8"
+        ]
+        
+        for requirement in webview_requirements:
+            if requirement not in webview_content:
+                self.issues_found.append(f"Missing WebView requirement: {requirement}")
                 return False
         
         # Check for JavaScript functionality
