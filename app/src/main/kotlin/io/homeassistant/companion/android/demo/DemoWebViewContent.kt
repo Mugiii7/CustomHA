@@ -12,7 +12,8 @@ class DemoWebViewContent @Inject constructor(
         val entities = demoEntityRepository.getEntities()
         
         val entityCards = entities.joinToString("\n") { entity ->
-            when (entity.domain) {
+            val domain = entity.entityId.split(".")[0]
+            when (domain) {
                 "light", "switch" -> generateControlCard(entity)
                 "sensor" -> generateSensorCard(entity)
                 "binary_sensor" -> generateBinarySensorCard(entity)
