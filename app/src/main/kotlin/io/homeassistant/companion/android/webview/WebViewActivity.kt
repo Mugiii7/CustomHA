@@ -206,6 +206,12 @@ class WebViewActivity :
     @Named("keyChainRepository")
     lateinit var keyChainRepository: KeyChainRepository
 
+    @Inject
+    lateinit var demoModeManager: DemoModeManager
+
+    @Inject
+    lateinit var demoWebViewContent: DemoWebViewContent
+
     private lateinit var webView: WebView
     private lateinit var loadedUrl: String
     private lateinit var decor: FrameLayout
