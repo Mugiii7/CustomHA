@@ -54,8 +54,9 @@ class AndroidApplicationDependenciesConventionPlugin : Plugin<Project> {
                     "fullImplementation"(libs.play.services.location)
                     "fullImplementation"(libs.play.services.home)
                     "fullImplementation"(libs.play.services.threadnetwork)
-                    "fullImplementation"(platform(libs.firebase.bom))
-                    "fullImplementation"(libs.firebase.messaging)
+                    // Firebase dependencies disabled - no Firebase setup
+                    // "fullImplementation"(platform(libs.firebase.bom))
+                    // "fullImplementation"(libs.firebase.messaging)
                     "fullImplementation"(libs.sentry.android.core)
                     "fullImplementation"(libs.play.services.wearable)
                     "fullImplementation"(libs.wear.remote.interactions)
