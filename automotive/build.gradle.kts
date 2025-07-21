@@ -90,7 +90,7 @@ dependencies {
     implementation(libs.car.automotive)
 }
 
-// Disable to fix memory leak and be compatible with the configuration cache.
-configure<GoogleServicesPluginConfig> {
-    disableVersionCheck = true
-}
+// Google Services plugin configuration disabled - no Firebase setup
+// configure<GoogleServicesPluginConfig> {
+//     disableVersionCheck = true
+// }
