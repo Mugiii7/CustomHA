@@ -3,6 +3,7 @@ package io.homeassistant.companion.android.launch
 import io.homeassistant.companion.android.BuildConfig
 import io.homeassistant.companion.android.common.data.integration.DeviceRegistration
 import io.homeassistant.companion.android.common.data.servers.ServerManager
+import io.homeassistant.companion.android.demo.DemoModeManager
 import javax.inject.Inject
 import kotlinx.coroutines.launch
 import timber.log.Timber
