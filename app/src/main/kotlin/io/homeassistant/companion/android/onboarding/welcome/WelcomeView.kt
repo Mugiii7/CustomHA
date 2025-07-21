@@ -79,8 +79,18 @@ fun WelcomeView(onContinue: () -> Unit, onDemoMode: () -> Unit) {
 
         Button(
             onClick = onContinue,
+            modifier = Modifier.fillMaxWidth(),
         ) {
             Text(text = stringResource(id = commonR.string.continue_connect))
+        }
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        OutlinedButton(
+            onClick = onDemoMode,
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            Text(text = "Try Demo Mode")
         }
     }
 }
