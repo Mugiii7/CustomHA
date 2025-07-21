@@ -53,7 +53,7 @@ dependencies {
     screenshotTestImplementation(libs.compose.uiTooling)
 }
 
-// Disable to fix memory leak and be compatible with the configuration cache.
-configure<GoogleServicesPluginConfig> {
-    disableVersionCheck = true
-}
+// Google Services plugin configuration disabled - no Firebase setup
+// configure<GoogleServicesPluginConfig> {
+//     disableVersionCheck = true
+// }
