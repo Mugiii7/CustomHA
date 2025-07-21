@@ -68,6 +68,9 @@ class LaunchActivity :
     @Inject
     lateinit var sensorDao: SensorDao
 
+    @Inject
+    lateinit var demoModeManager: DemoModeManager
+
     private val mainScope = CoroutineScope(Dispatchers.Main + Job())
 
     private val settingViewModel: SettingViewModel by viewModels()
