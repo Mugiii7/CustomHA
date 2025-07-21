@@ -25,6 +25,7 @@ import io.homeassistant.companion.android.database.server.ServerSessionInfo
 import io.homeassistant.companion.android.database.server.ServerType
 import io.homeassistant.companion.android.database.server.ServerUserInfo
 import io.homeassistant.companion.android.database.settings.WebsocketSetting
+import io.homeassistant.companion.android.demo.DemoModeManager
 import io.homeassistant.companion.android.onboarding.OnboardApp
 import io.homeassistant.companion.android.onboarding.getMessagingToken
 import io.homeassistant.companion.android.sensors.LocationSensorManager
