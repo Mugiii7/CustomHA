@@ -97,6 +97,14 @@ class LaunchActivity :
     override fun displayWebview() {
         presenter.setSessionExpireMillis(0)
 
+        // Check for demo mode first
+        if (demoModeManager.isDemoModeEnabled) {
+            startActivity(WebViewActivity.newInstance(this, "/"))
+            finish()
+            overridePendingTransition(0, 0)
+            return
+        }
+
         if (packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE) && BuildConfig.FLAVOR == "full") {
             val carIntent = Intent(
                 this,
