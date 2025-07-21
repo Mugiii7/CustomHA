@@ -16,7 +16,11 @@ import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
 import io.homeassistant.companion.android.webview.WebViewActivity
 import javax.inject.Inject
 
++@AndroidEntryPoint
 class WelcomeFragment : Fragment() {
+
+    @Inject
+    lateinit var demoModeManager: DemoModeManager
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return ComposeView(requireContext()).apply {
